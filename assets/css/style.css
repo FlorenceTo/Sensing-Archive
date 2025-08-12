@@ -58,7 +58,7 @@
 
 .mapboxgl-ctrl-logo {
   transform: scale(0.2); /* Shrink logo size */
-  transform-origin: bottom left;
+  transform-origin: -100, bottom left;
 }
 
 }
