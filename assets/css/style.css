@@ -12,6 +12,7 @@
 }
 
 #sidepanel {
+  background-color: #212121
   width: 300px;
   padding: 4rem;
   box-sizing: border-box;
