@@ -12,11 +12,10 @@
 }
 
 #sidepanel {
-  background-color: #212121
-  width: 300px;
+  width: 200px;
   padding: 4rem;
   box-sizing: border-box;
-  background-color: #212121;
+  background-color: #000000;
   overflow-y: auto;
   border-left: 0px solid #ddd;
 }
@@ -27,7 +26,7 @@
 }
 
 #info a {
-  color: #F5F5F5;
+  color: #FF0000;
   text-decoration: none;
 }
 
