@@ -12,7 +12,7 @@
 }
 
 #sidepanel {
-  width: 200px;
+  width: 300px;
   padding: 4rem;
   box-sizing: border-box;
   background-color: #000000;
@@ -21,7 +21,7 @@
 }
 
 #info img {
-  max-width: 80%;
+  max-width: 90%;
   margin-top: 10px;
 }
 
@@ -38,7 +38,7 @@
 .marker {
   background-image: url('https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png');
   background-size: cover;
-  width: 20px;
+  width: 40px;
   height: 20px;
   cursor: cell;
 }
