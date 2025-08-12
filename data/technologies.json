@@ -1,17 +1,16 @@
 [
   {
-    "id": "magneto-1",
-    "title": "Magnetometer Assisted UAV",
-    "category": "Electromagnetic sensing",
-    "bio_inspiration": "Avian magnetoreception",
-    "developer": "Example Labs",
-    "first_use": "2011",
-    "conflicts": ["Gaza"],
-    "lat": 31.5,
-    "lng": 34.5,
-    "description": "Miniature magnetometer for GPS-denied navigation.",
-    "image": "assets/images/magneto-1.jpg",
-    "audio": "assets/audio/testimony-1.mp3",
-    "sources": ["https://example.org/report"]
+    "title": "Magnetoreception in Birds",
+    "description": "Research into how birds sense Earth's magnetic field to navigate.",
+    "coords": [-0.1276, 51.5074],
+    "image": "assets/images/bird.jpg",
+    "link": "https://en.wikipedia.org/wiki/Magnetoreception"
+  },
+  {
+    "title": "Drone Surveillance",
+    "description": "Use of drones equipped with biomimetic sensors in military operations.",
+    "coords": [-74.006, 40.7128],
+    "image": "assets/images/drone.jpg",
+    "link": "https://en.wikipedia.org/wiki/Drone"
   }
 ]
