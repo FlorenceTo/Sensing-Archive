@@ -42,3 +42,13 @@
   height: 40px;
   cursor: pointer;
 }
+/* Make Mapbox logo and text smaller */
+.mapboxgl-ctrl-attrib {
+  font-size: 10px !important; /* Smaller text */
+  padding: 2px 4px !important;
+}
+
+.mapboxgl-ctrl-logo {
+  transform: scale(0.7); /* Shrink logo size */
+  transform-origin: bottom left;
+}
