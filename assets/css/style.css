@@ -12,10 +12,11 @@
 }
 
 #sidepanel {
+  background-color: #212121 !important; /* force dark background */
+  color: #FFFFFF !important;            /* force white text */
   width: 300px;
   padding: 4rem;
   box-sizing: border-box;
-  background-color: #212121;
   overflow-y: auto;
   border-left: 0px solid #ddd;
 }
