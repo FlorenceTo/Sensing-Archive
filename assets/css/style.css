@@ -8,12 +8,14 @@
 
 /* Map takes 70% width */
 #map {
+  width: 80%;
   flex: 7;
   position: relative;
 }
 
 /* Side panel takes 30% width */
 #sidepanel {
+  width:  20%;
   flex: 3;
   background-color: #000000;
   color: #FFFFFF;
