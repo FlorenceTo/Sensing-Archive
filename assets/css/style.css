@@ -21,7 +21,7 @@
 }
 
 #info img {
-  max-width: 100%;
+  max-width: 80%;
   margin-top: 10px;
 }
 
@@ -38,7 +38,7 @@
 .marker {
   background-image: url('https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png');
   background-size: cover;
-  width: 30px;
-  height: 40px;
-  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  cursor: cell;
 }
