@@ -44,7 +44,7 @@
 }
 /* Make Mapbox logo and text smaller */
 .mapboxgl-ctrl-attrib {
-  font-size: 10px !important; /* Smaller text */
+  font-size: 5px !important; /* Smaller text */
   padding: 2px 4px !important;
 }
 
