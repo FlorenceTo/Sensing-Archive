@@ -1,1 +1,28 @@
+// Example dataset - Add more locations here
+const locations = [
+  {
+    id: 1,
+    title: "Gaza Drone Surveillance",
+    coords: [31.5, 34.47],
+    description: "Drone and electromagnetic sensing technologies used in surveillance and conflict zones in Gaza.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Gaza_Strip_01.jpg/320px-Gaza_Strip_01.jpg",
+    link: "https://en.wikipedia.org/wiki/Israeli–Palestinian_conflict"
+  },
+  {
+    id: 2,
+    title: "Ukraine Electronic Warfare Site",
+    coords: [49.0, 31.0],
+    description: "Use of electronic warfare technologies to disrupt communication and sensor networks during conflict.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Ukraine_Eastern_battlefront_2022.jpg/320px-Ukraine_Eastern_battlefront_2022.jpg",
+    link: "https://en.wikipedia.org/wiki/Electronic_warfare"
+  },
+  {
+    id: 3,
+    title: "Nevada Test and Training Range",
+    coords: [37.5, -115.0],
+    description: "A major US military testing site for advanced sensor technologies and drone simulations.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Nevada_Test_and_Training_Range_2006.jpg/320px-Nevada_Test_and_Training_Range_2006.jpg",
+    link: "https://en.wikipedia.org/wiki/Nevada_Test_and_Training_Range"
+  }
+];
 
