@@ -13,11 +13,11 @@
 
 #sidepanel {
   width: 300px;
-  padding: 1rem;
+  padding: 3rem;
   box-sizing: border-box;
   background-color: #212121;
   overflow-y: auto;
-  border-left: 1px solid #ddd;
+  border-left: 0px solid #ddd;
 }
 
 #info img {
