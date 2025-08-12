@@ -1,98 +1,43 @@
-// main.js
-let map = L.map('map').setView([31.5, 34.5], 8);
+const mapboxToken = "YOUR_MAPBOX_TOKEN";
 
-// Use OpenStreetMap tiles with attribution
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
+const map = L.map("map").setView([30, 0], 2);
 
-let markersGroup = L.layerGroup().addTo(map);
-let technologies = [];
-let fuse; // search
-
-// load data
-fetch('data/technologies.json')
-  .then(r => r.json())
-  .then(data => {
-    technologies = data;
-    initFilters(data);
-    initSearch(data);
-    renderList(data);
-    addMarkers(data);
-  });
-
-// add markers
-function addMarkers(items) {
-  markersGroup.clearLayers();
-  items.forEach(item => {
-    if (!item.lat || !item.lng) return;
-    let marker = L.marker([item.lat, item.lng]);
-    let popupHtml = `<strong>${escapeHtml(item.title)}</strong><br>${escapeHtml(item.description || '')}`;
-    if (item.image) popupHtml += `<br><img src="${item.image}" alt="" style="max-width:180px;">`;
-    if (item.audio) popupHtml += `<br><audio controls src="${item.audio}"></audio>`;
-    popupHtml += `<br><a href="${item.sources ? item.sources[0] : '#'}" target="_blank">Source</a>`;
-    marker.bindPopup(popupHtml);
-    markersGroup.addLayer(marker);
-  });
-}
-
-// render textual list
-function renderList(items) {
-  let list = document.getElementById('list');
-  list.innerHTML = '';
-  items.forEach(item => {
-    let div = document.createElement('div');
-    div.className = 'entry';
-    div.innerHTML = `<h3>${escapeHtml(item.title)}</h3>
-      <div>${escapeHtml(item.category || '')} | ${escapeHtml(item.conflicts ? item.conflicts.join(', ') : '')}</div>
-      <p>${escapeHtml(item.description || '').substring(0,300)}...</p>
-      ${item.image ? `<img src="${item.image}" alt="">` : ''}
-      ${item.audio ? `<audio controls src="${item.audio}"></audio>` : ''}`;
-    list.appendChild(div);
-  });
-}
-
-// search using Fuse.js
-function initSearch(data) {
-  const options = { keys: ['title', 'category', 'bio_inspiration', 'description'] , threshold: 0.3};
-  fuse = new Fuse(data, options);
-  const searchInput = document.getElementById('search');
-  searchInput.addEventListener('input', e => {
-    const q = e.target.value.trim();
-    const results = q ? fuse.search(q).map(r => r.item) : technologies;
-    applyFilterAndRender(results);
-  });
-}
-
-function initFilters(data) {
-  const categories = Array.from(new Set(data.map(d => d.category).filter(Boolean)));
-  const filter = document.getElementById('filter');
-  categories.forEach(cat => {
-    const opt = document.createElement('option');
-    opt.value = cat;
-    opt.textContent = cat;
-    filter.appendChild(opt);
-  });
-  filter.addEventListener('change', () => {
-    applyFilterAndRender();
-  });
-}
-
-// combine filter and current search results
-function applyFilterAndRender(currentSearchResults) {
-  const filterVal = document.getElementById('filter').value;
-  let items = currentSearchResults || technologies;
-  if (filterVal && filterVal !== 'all') {
-    items = items.filter(i => i.category === filterVal);
+L.tileLayer(
+  `https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/{z}/{x}/{y}?access_token=${mapboxToken}`,
+  {
+    maxZoom: 19,
+    tileSize: 512,
+    zoomOffset: -1,
+    attribution:
+      '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   }
-  renderList(items);
-  addMarkers(items);
+).addTo(map);
+
+const infoPanel = document.getElementById("info");
+
+function updateInfo(location) {
+  infoPanel.innerHTML = `
+    <h3>${location.title}</h3>
+    <p>${location.description}</p>
+    ${
+      location.image
+        ? `<img src="${location.image}" alt="${location.title}" />`
+        : ""
+    }
+    ${
+      location.link
+        ? `<p><a href="${location.link}" target="_blank">Learn more</a></p>`
+        : ""
+    }
+  `;
 }
 
-// tiny helper to escape HTML
-function escapeHtml(s) {
-  if (!s) return '';
-  return s.replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; });
-}
-
+fetch('data/technologies.json')
+  .then(response => response.json())
+  .then(locations => {
+    locations.forEach(location => {
+      const marker = L.marker(location.coords).addTo(map);
+      marker.on("click", () => updateInfo(location));
+    });
+  })
+  .catch(error => console.error('Error loading data:', error));
