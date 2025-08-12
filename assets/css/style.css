@@ -1,4 +1,4 @@
-/* Basic layout */
+/* Layout */
 #container {
   display: flex;
   height: 100vh;
@@ -6,33 +6,34 @@
   font-family: Arial, sans-serif;
 }
 
+/* Map takes 70% width */
 #map {
-  flex: 1;
+  flex: 7;
   position: relative;
 }
 
+/* Side panel takes 30% width */
 #sidepanel {
-  background-color: #212121 !important; /* dark background */
-  color: #FFFFFF !important;            /* white text */
-  width: 100px;
-  padding: 4rem;
+  flex: 3;
+  background-color: #212121;
+  color: #FFFFFF;
+  padding: 2rem;
   box-sizing: border-box;
   overflow-y: auto;
-  border-left: 0px solid #ddd;
 }
 
-/* Ensure all text elements inside #sidepanel are white */
+/* Text inside panel */
 #sidepanel h2,
 #sidepanel p,
 #sidepanel div,
 #sidepanel span,
 #sidepanel a {
-  color: #FFFFFF !important;
+  color: #FFFFFF;
 }
 
 /* Links */
 #info a {
-  color: #F5F5F5 !important;
+  color: #F5F5F5;
   text-decoration: none;
 }
 
