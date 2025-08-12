@@ -4,36 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sensing Archive Interactive Map</title>
-  
+
   <!-- Mapbox GL CSS -->
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
-  
-  <!-- Your stylesheet -->
+
+  <!-- Your CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
-  
-  <style>
-    /* Set map height explicitly */
-    #map {
-      position: relative;
-      width: 70vw;
-      height: 80vh;
-      float: left;
-    }
-    #sidepanel {
-      width: 28vw;
-      height: 80vh;
-      float: right;
-      overflow-y: auto;
-      padding: 1rem;
-      box-sizing: border-box;
-      background-color: #f9f9f9;
-    }
-    #container {
-      width: 100vw;
-      height: 80vh;
-      display: flex;
-    }
-  </style>
 </head>
 <body>
   <div id="container">
@@ -48,13 +24,8 @@
 
   <!-- Mapbox GL JS -->
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-  
-  <!-- Your main JS script -->
-  <script src="assets/js/main.js"></script>
-  
-  <!-- Load your JSON data -->
-  <script src="data/technologies.json" type="application/json" id="data-json" hidden></script>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
+  <!-- Your JS -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
