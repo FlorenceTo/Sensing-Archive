@@ -1,4 +1,12 @@
-/* Layout */
+/* Reset margins and padding so everything fits */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Make the container fill the entire viewport */
 #container {
   display: flex;
   flex-direction: row;
@@ -11,6 +19,7 @@
 #map {
   flex: 7;
   position: relative;
+  height: 100%;
 }
 
 /* Side panel takes 30% width on desktop */
@@ -21,9 +30,10 @@
   padding: 2rem;
   box-sizing: border-box;
   overflow-y: auto;
+  height: 100%;
 }
 
-/* Text inside panel */
+/* Ensure all text is visible */
 #sidepanel h2,
 #sidepanel p,
 #sidepanel div,
@@ -42,7 +52,7 @@
   text-decoration: underline;
 }
 
-/* Responsive: stack on smaller screens or portrait tablets */
+/* Responsive: stack layout for small screens */
 @media (max-width: 1024px) {
   #container {
     flex-direction: column;
@@ -50,13 +60,13 @@
 
   #map {
     flex: none;
-    height: 60vh; /* map takes 60% of screen height */
+    height: 60vh;
     width: 100%;
   }
 
   #sidepanel {
     flex: none;
-    height: 40vh; /* panel takes 40% of screen height */
+    height: 40vh;
     width: 100%;
   }
 }
