@@ -1,50 +1,32 @@
-/* Reset margins and padding so everything fits */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-}
-
-/* Make the container fill the entire viewport */
+/* Basic layout */
 #container {
   display: flex;
-  flex-direction: row;
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
   font-family: Arial, sans-serif;
 }
 
-/* Map takes 70% width on desktop */
 #map {
-  flex: 7;
+  flex: 1;
   position: relative;
-  height: 100%;
 }
 
-/* Side panel takes 30% width on desktop */
 #sidepanel {
-  flex: 3;
-  background-color: #212121;
-  color: #FFFFFF;
-  padding: 2rem;
+  width: 300px;
+  padding: 1rem;
   box-sizing: border-box;
+  background-color: #f7f7f7;
   overflow-y: auto;
-  height: 100%;
+  border-left: 1px solid #ddd;
 }
 
-/* Ensure all text is visible */
-#sidepanel h2,
-#sidepanel p,
-#sidepanel div,
-#sidepanel span,
-#sidepanel a {
-  color: #FFFFFF;
+#info img {
+  max-width: 100%;
+  margin-top: 10px;
 }
 
-/* Links */
 #info a {
-  color: #F5F5F5;
+  color: #0077cc;
   text-decoration: none;
 }
 
@@ -52,21 +34,11 @@ html, body {
   text-decoration: underline;
 }
 
-/* Responsive: stack layout for small screens */
-@media (max-width: 1024px) {
-  #container {
-    flex-direction: column;
-  }
-
-  #map {
-    flex: none;
-    height: 60vh;
-    width: 100%;
-  }
-
-  #sidepanel {
-    flex: none;
-    height: 40vh;
-    width: 100%;
-  }
+/* Marker styling */
+.marker {
+  background-image: url('https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png');
+  background-size: cover;
+  width: 30px;
+  height: 40px;
+  cursor: pointer;
 }
