@@ -15,7 +15,7 @@
 /* Side panel takes 30% width */
 #sidepanel {
   flex: 3;
-  background-color: #212121;
+  background-color: #000000;
   color: #FFFFFF;
   padding: 2rem;
   box-sizing: border-box;
