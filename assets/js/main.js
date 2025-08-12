@@ -1,11 +1,17 @@
 mapboxgl.accessToken = "pk.eyJ1IjoidHlyeXgiLCJhIjoiY21lOTFxeWl2MG1kODJtcjN2NTdoa3NrZCJ9.uM0thTuU2XaQ7jK-71U3vA";
 
 const map = new mapboxgl.Map({
-  container: "map",
-  style: "mapbox://styles/tyryx/cme91nqal00cc01qwavt6cgwu",
-  center: [0, 30],  // adjust initial center as you want
-  zoom: 2,
+  container: 'map',
+  style: 'mapbox://styles/mapbox/satellite-v9',
+  center: [-0.1276, 51.5074], // London example
+  zoom: 5,
+  attributionControl: false // This hides the default attribution position
 });
+
+// Add smaller attribution in bottom-right
+map.addControl(new mapboxgl.AttributionControl({
+  compact: true
+}), 'bottom-right');
 
 const infoPanel = document.getElementById("info");
 
