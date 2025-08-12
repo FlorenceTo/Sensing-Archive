@@ -15,7 +15,7 @@
   width: 300px;
   padding: 1rem;
   box-sizing: border-box;
-  background-color: #ffffff;
+  background-color: #212121;
   overflow-y: auto;
   border-left: 1px solid #ddd;
 }
@@ -26,7 +26,7 @@
 }
 
 #info a {
-  color: #7A0000;
+  color: #F5F5F5;
   text-decoration: none;
 }
 
