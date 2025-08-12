@@ -1,1 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Sensing Archive</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Sensing Technologies Archive</h1>
+    <div id="controls">
+      <input id="search" type="search" placeholder="Search technologies" />
+      <select id="filter">
+        <option value="all">All categories</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section id="map" style="height: 60vh"></section>
+    <section id="list"></section>
+  </main>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Fuse.js for client-side search -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
 
