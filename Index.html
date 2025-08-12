@@ -1,34 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Sensing Archive</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sensing Archive Interactive Map</title>
+  <link
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Sensing Technologies Archive</h1>
-    <div id="controls">
-      <input id="search" type="search" placeholder="Search technologies" />
-      <select id="filter">
-        <option value="all">All categories</option>
-      </select>
+  <div id="container">
+    <div id="map"></div>
+    <div id="sidepanel">
+      <h2>Sensing Technologies Archive</h2>
+      <div id="info">
+        <p>Click a marker on the map to see details here.</p>
+      </div>
     </div>
-  </header>
+  </div>
 
-  <main>
-    <section id="map" style="height: 60vh"></section>
-    <section id="list"></section>
-  </main>
-
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <!-- Fuse.js for client-side search -->
-  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
-  <script src="assets/js/main.js"></script>
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  ></script>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
