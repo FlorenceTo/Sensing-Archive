@@ -44,11 +44,11 @@
 }
 /* Make Mapbox logo and text smaller */
 .mapboxgl-ctrl-attrib {
-  font-size: 5px !important; /* Smaller text */
+  font-size: 2px !important; /* Smaller text */
   padding: 2px 4px !important;
 }
 
 .mapboxgl-ctrl-logo {
-  transform: scale(0.2); /* Shrink logo size */
+  transform: scale(0.1); /* Shrink logo size */
   transform-origin: bottom left;
 }
