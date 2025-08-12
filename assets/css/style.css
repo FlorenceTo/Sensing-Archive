@@ -11,13 +11,22 @@
   position: relative;
 }
 
-#sidepanel, #sidepanel * {
-  color: #000000; /* White text for all children */
+#sidepanel {
+  width: 300px;
+  padding: 4rem;
+  box-sizing: border-box;
+  background-color: #212121;
+  overflow-y: auto;
+  border-left: 0px solid #ddd;
 }
 
-/* Override links specifically */
+#info img {
+  max-width: 80%;
+  margin-top: 10px;
+}
+
 #info a {
-  color: #F5F5F5; /* Light grey for links */
+  color: #F5F5F5;
   text-decoration: none;
 }
 
@@ -25,12 +34,7 @@
   text-decoration: underline;
 }
 
-/* Keep your existing styles for images and markers */
-#info img {
-  max-width: 80%;
-  margin-top: 10px;
-}
-
+/* Marker styling */
 .marker {
   background-image: url('https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png');
   background-size: cover;
