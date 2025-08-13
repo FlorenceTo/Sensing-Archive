@@ -61,7 +61,7 @@ html, body {
   padding: 0px !important;
   opacity: 0.01;
   bottom: -10px !important;
-  left: -10px !important;
+  left: -30px !important;
 }
 .mapboxgl-ctrl-bottom-left {
   bottom: -10px !important;
