@@ -8,12 +8,12 @@ const map = new mapboxgl.Map({
   attributionControl: false // This hides the default attribution position
 });
 
-// Add smaller attribution in bottom-right
-//map.addControl(new mapboxgl.AttributionControl({
- // compact: true
-//}), 'bottom-right');
+ Add smaller attribution in bottom-right
+map.addControl(new mapboxgl.AttributionControl({
+  compact: true
+}), 'bottom-left');
 
-//const infoPanel = document.getElementById("info");
+const infoPanel = document.getElementById("info");
 
 function updateInfo(location) {
   infoPanel.innerHTML = `
