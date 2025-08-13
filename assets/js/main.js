@@ -38,4 +38,27 @@ fetch("data/technologies.json")
   .then((locations) => {
     locations.forEach((location) => {
       // Create a red circle marker
-      const el = document.
+      const el = document.createElement("div");
+      el.style.width = "20px";
+      el.style.height = "20px";
+      el.style.backgroundColor = "red";
+      el.style.borderRadius = "50%";
+      el.style.border = "2px solid white";
+      el.style.boxShadow = "0 0 5px rgba(0,0,0,0.3)";
+      el.style.cursor = "pointer";
+
+      // Create the marker
+      const marker = new mapboxgl.Marker(el)
+        .setLngLat(location.coords) // [lng, lat]
+        .addTo(map);
+
+      // On marker click, update the info panel
+      el.addEventListener("click", () => {
+        updateInfo(location);
+      });
+    });
+  })
+  .catch((error) => {
+    console.error("Error loading data:", error);
+    infoPanel.innerHTML = "<p>Failed to load location data.</p>";
+  });
