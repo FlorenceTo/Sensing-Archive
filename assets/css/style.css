@@ -52,13 +52,4 @@
     width: 100%;
     height: 50vh; /* half height each on smaller screens */
   }
-  /* Make Mapbox logo and text smaller */
-.mapboxgl-ctrl-attrib {
-  font-size: 4px !important; /* Smaller text */
-  padding: 2px 4px !important;
-}
 
-.mapboxgl-ctrl-logo {
-  transform: scale(0.2); /* Shrink logo size */
-  transform-origin: -100, bottom left;
-}
