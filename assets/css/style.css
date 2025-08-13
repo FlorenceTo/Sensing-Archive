@@ -1,8 +1,15 @@
-/* Layout */
+/* Ensure full height for everything */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Layout container */
 #container {
   display: flex;
-  height: 100vh;
-  width: 100vw;
+  height: 100vh;  /* Full browser height */
+  width: 100vw;   /* Full browser width */
   font-family: Arial, sans-serif;
 }
 
@@ -25,7 +32,7 @@
   overflow-y: auto;
 }
 
-/* Text inside panel */
+/* Ensure all panel text is white */
 #sidepanel h2,
 #sidepanel p,
 #sidepanel div,
@@ -34,12 +41,11 @@
   color: #FFFFFF;
 }
 
-/* Links */
+/* Links in info panel */
 #info a {
   color: #F5F5F5;
   text-decoration: none;
 }
-
 #info a:hover {
   text-decoration: underline;
 }
@@ -50,13 +56,11 @@
   transform-origin: bottom left;
   opacity: 0.3;
 }
-
 .mapboxgl-ctrl-attrib {
   font-size: 6px !important;
   padding: 0 1px !important;
   opacity: 0.3;
 }
-
 .mapboxgl-ctrl-bottom-left {
   bottom: 1px !important;
   left: 1px !important;
@@ -71,7 +75,7 @@
   #sidepanel {
     flex: none;
     width: 100%;
-    height: 50vh;
+    height: 50vh; /* Half height each */
     max-width: 100%;
   }
 }
