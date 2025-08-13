@@ -65,6 +65,16 @@ html, body {
   bottom: -10px !important;
   left: -10px !important;
 }
+/* Remove the white divider line next to the attribution toggle */
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib::before {
+  display: none !important; /* completely hides it */
+}
+
+/* Or, if you just want it to match your background instead of hiding */
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib::before {
+  background-color: #000 !important; /* match sidepanel/map background */
+  opacity: 0.3; /* faint like the attribution text */
+}
 
 /* Responsive adjustments for tablets and smaller screens */
 @media (max-width: 1024px) {
