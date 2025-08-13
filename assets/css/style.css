@@ -58,7 +58,7 @@ html, body {
 }
 .mapboxgl-ctrl-attrib {
   font-size: 3px !important;
-  padding: 0 1px !important;
+  padding: 0px !important;
   opacity: 0.01;
   bottom: -10px !important;
   left: -10px !important;
@@ -75,7 +75,7 @@ html, body {
 /* Or, if you just want it to match your background instead of hiding */
 .mapboxgl-ctrl.mapboxgl-ctrl-attrib::before {
   background-color: #000 !important; /* match sidepanel/map background */
-  opacity: 0.1; /* faint like the attribution text */
+  opacity: 0.01; /* faint like the attribution text */
 }
 
 /* Responsive adjustments for tablets and smaller screens */
