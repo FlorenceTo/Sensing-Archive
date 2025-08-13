@@ -57,9 +57,9 @@ html, body {
   opacity: 0.3;
 }
 .mapboxgl-ctrl-attrib {
-  font-size: 6px !important;
-  padding: 0 1px !important;
-  opacity: 0.3;
+  font-size: 3px !important;
+  padding: 0 3px !important;
+  opacity: 0.01;
 }
 .mapboxgl-ctrl-bottom-left {
   bottom: -10px !important;
