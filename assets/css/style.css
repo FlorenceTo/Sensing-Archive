@@ -44,22 +44,24 @@
   text-decoration: underline;
 }
 
-/* Make Mapbox logo & text smaller */
-.mapboxgl-ctrl-attrib {
-  font-size: 10px !important;
-  padding: 2px 4px !important;
-}
-
+/* Ultra-small Mapbox logo & attribution */
 .mapboxgl-ctrl-logo {
-  transform: scale(0.6);
+  transform: scale(0.15);   /* about 15% size */
   transform-origin: bottom left;
+  opacity: 0.3;             /* very faint */
 }
 
-/* Responsive adjustments for tablets and phones */
-@media (max-width: 1024px) {
-  #container {
-    flex-direction: column;
-  }
+.mapboxgl-ctrl-attrib {
+  font-size: 6px !important; /* tiny text */
+  padding: 0 1px !important;
+  opacity: 0.3;              /* faint */
+}
+
+/* Push into an unobtrusive corner */
+.mapboxgl-ctrl-bottom-left {
+  bottom: 1px !important;
+  left: 1px !important;
+}
 
   #map,
   #sidepanel {
