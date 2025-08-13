@@ -11,6 +11,7 @@
   width: 80%;
   flex: 7;
   position: relative;
+  height: 100%; /* ✅ Ensure map fills container */
 }
 
 /* Side panel takes 20% width */
@@ -42,25 +43,28 @@
 #info a:hover {
   text-decoration: underline;
 }
+
+/* Make Mapbox logo & text smaller */
+.mapboxgl-ctrl-attrib {
+  font-size: 10px !important;
+  padding: 2px 4px !important;
+}
+
+.mapboxgl-ctrl-logo {
+  transform: scale(0.6);
+  transform-origin: bottom left;
+}
+
 /* Responsive adjustments for tablets and phones */
 @media (max-width: 1024px) {
   #container {
     flex-direction: column;
   }
-  #map, #sidepanel {
+
+  #map,
+  #sidepanel {
     flex: none;
     width: 100%;
     height: 50vh; /* half height each on smaller screens */
   }
-  
-  /* Make Mapbox logo and text smaller */
-.mapboxgl-ctrl-attrib {
-  font-size: 2px !important; /* Smaller text */
-  padding: 2px 4px !important;
 }
-
-.mapboxgl-ctrl-logo {
-  transform: scale(0.1); /* Shrink logo size */
-  transform-origin: bottom left;
-}
-
